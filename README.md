@@ -1,6 +1,6 @@
 # ansible systemd-resolved role
 
-[![Build Status](https://travis-ci.org/damex/ansible-role-systemd-resolved.svg?branch=master)](https://travis-ci.org/damex/ansible-role-systemd-resolved)
+[![Build Status](https://travis-ci.com/damex/ansible-role-systemd-resolved.svg?branch=master)](https://travis-ci.com/damex/ansible-role-systemd-resolved)
 
 The systemd-resolved role is designed to be used with Debian distributive.
 
