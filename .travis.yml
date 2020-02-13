@@ -1,0 +1,11 @@
+---
+language: python
+python:
+  - "3.7"
+install:
+  - pip install yamllint
+script:
+  - yamllint -s .
+notifications:
+  webhooks:
+    - 'https://galaxy.ansible.com/api/v1/notifications/'

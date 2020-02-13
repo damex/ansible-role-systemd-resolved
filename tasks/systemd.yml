@@ -1,0 +1,17 @@
+---
+- name: ensure systemd
+  block:
+    - name: ensure systemd-resolved service is enabled
+      systemd:
+        name: "{{ systemd_resolved_service_name }}"
+        enabled: true
+    - name: ensure systemd-resolved service is started
+      systemd:
+        name: "{{ systemd_resolved_service_name }}"
+        state: "started"
+    - name: ensure systemd-resolved service is restarted
+      systemd:
+        name: "{{ systemd_resolved_service_name }}"
+        state: "restarted"
+      when: systemd_resolved_conf.changed
+  become: true

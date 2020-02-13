@@ -1,0 +1,8 @@
+---
+
+- file:
+    src: "/run/systemd/resolve/stub-resolv.conf"
+    dest: "/etc/resolv.conf"
+    state: link
+    force: true
+  become: true
