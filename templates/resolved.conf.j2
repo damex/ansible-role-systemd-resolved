@@ -1,0 +1,11 @@
+# {{ ansible_managed }}
+[Resolve]
+DNS = {{ systemd_resolved_dns | join(' ') }}
+Domains = {{ systemd_resolved_domains | join(' ') }}
+LLMNR = {{ systemd_resolved_llmnr }}
+MulticastDNS = {{ systemd_resolved_multicastdns }}
+DNSSEC = {{ systemd_resolved_dnssec }}
+DNSOverTLS = {{ systemd_resolved_dnsovertls }}
+Cache = {{ systemd_resolved_cache }}
+DNSStubListener = {{ systemd_resolved_dnsstublistener }}
+ReadEtcHosts = {{ systemd_resolved_readetchosts }}

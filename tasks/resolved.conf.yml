@@ -1,0 +1,10 @@
+---
+- name: ensure resolved.conf
+  template:
+    src: "resolved.conf.j2"
+    dest: "{{ systemd_resolved_conf_file }}"
+    group: "root"
+    owner: "root"
+    mode: 0644
+  become: true
+  register: systemd_resolved_conf
