@@ -1,8 +1,8 @@
 ---
-
-- file:
-    src: "/run/systemd/resolve/stub-resolv.conf"
-    dest: "/etc/resolv.conf"
-    state: link
-    force: true
-  become: true
+- name: ensure systemd-resolved
+  block:
+    - import_tasks: resolved.conf.yml
+    - import_tasks: systemd.yml
+    - import_tasks: resolv.conf.yml
+  tags:
+    - systemd-resolved
