@@ -1,0 +1,5 @@
+---
+- name: ensure facts
+  setup:
+    gather_subset:
+      - network
