@@ -1,7 +1,7 @@
 ---
 - name: ensure resolv.conf
   file:
-    src: "/run/systemd/resolve/stub-resolv.conf"
+    src: "{{ systemd_resolv_conf_file }}"
     dest: "/etc/resolv.conf"
     state: link
     force: true
