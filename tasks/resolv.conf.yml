@@ -6,3 +6,4 @@
     state: link
     force: true
   become: true
+  when: systemd_resolved_override_resolv_conf
